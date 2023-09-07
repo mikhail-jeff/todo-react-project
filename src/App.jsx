@@ -5,10 +5,17 @@ import TaskForm from "./components/TaskForm";
 import todoIcon from "./assets/direct-hit.png";
 import doingIcon from "./assets/glowing-star.png";
 import doneIcon from "./assets/check-mark-button.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+// *** LOCAL STORAGE
+const oldTasks = localStorage.getItem("tasks");
 
 function App() {
-	const [tasks, setTasks] = useState([]);
+	const [tasks, setTasks] = useState(JSON.parse(oldTasks) || []);
+
+	useEffect(() => {
+		localStorage.setItem("tasks", JSON.stringify(tasks));
+	}, [tasks]);
 
 	// *** HANDLE DELETE
 	const handleDelete = (taskIndex) => {
