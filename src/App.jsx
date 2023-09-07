@@ -10,7 +10,11 @@ import { useState } from "react";
 function App() {
 	const [tasks, setTasks] = useState([]);
 
-	console.log("tasks", tasks);
+	// *** HANDLE DELETE
+	const handleDelete = (taskIndex) => {
+		const newTasks = tasks.filter((task, index) => index !== taskIndex);
+		setTasks(newTasks);
+	};
 
 	return (
 		<div className='app'>
@@ -21,18 +25,21 @@ function App() {
 					icon={todoIcon}
 					tasks={tasks}
 					status='todo'
+					handleDelete={handleDelete}
 				/>
 				<TaskColumn
 					title='Doing'
 					icon={doingIcon}
 					tasks={tasks}
 					status='doing'
+					handleDelete={handleDelete}
 				/>
 				<TaskColumn
 					title='Done'
 					icon={doneIcon}
 					tasks={tasks}
 					status='done'
+					handleDelete={handleDelete}
 				/>
 			</main>
 		</div>

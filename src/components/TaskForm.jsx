@@ -10,10 +10,12 @@ const TaskForm = ({ setTasks }) => {
 		tags: [],
 	});
 
+	// *** CHECK TAG
 	const checkTag = (tag) => {
 		return taskData.tags.some((item) => item === tag);
 	};
 
+	// *** SELECT TAG
 	const selectTag = (tag) => {
 		if (taskData.tags.some((item) => item === tag)) {
 			const filteredTags = taskData.tags.filter((item) => item !== tag);
@@ -28,6 +30,7 @@ const TaskForm = ({ setTasks }) => {
 		}
 	};
 
+	// *** HANDLE CHANGE
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 
@@ -36,6 +39,7 @@ const TaskForm = ({ setTasks }) => {
 		});
 	};
 
+	// *** HANDLE SUBMIT
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
@@ -43,6 +47,12 @@ const TaskForm = ({ setTasks }) => {
 
 		setTasks((prev) => {
 			return [...prev, taskData];
+		});
+
+		setTaskData({
+			task: "",
+			status: "todo",
+			tags: [],
 		});
 	};
 
@@ -52,6 +62,7 @@ const TaskForm = ({ setTasks }) => {
 				<input
 					type='text'
 					name='task'
+					value={taskData.task}
 					className='task_input'
 					placeholder='Enter your task'
 					onChange={handleChange}
@@ -85,6 +96,7 @@ const TaskForm = ({ setTasks }) => {
 						<select
 							name='status'
 							className='task_status'
+							value={taskData.status}
 							onChange={handleChange}>
 							<option value='todo'>Todo</option>
 							<option value='doing'>Doing</option>
