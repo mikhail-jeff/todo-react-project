@@ -1,9 +1,9 @@
 import React from "react";
+import { RiDeleteBin5Fill } from "react-icons/ri";
 
 import "./TaskCard.css";
 
 import Tag from "./Tag";
-import deleteIcon from "../assets/delete.png";
 
 const TaskCard = ({ title, tags, handleDelete, index }) => {
 	return (
@@ -23,11 +23,7 @@ const TaskCard = ({ title, tags, handleDelete, index }) => {
 				<div
 					className='task_delete'
 					onClick={() => handleDelete(index)}>
-					<img
-						src={deleteIcon}
-						className='delete_icon'
-						alt=''
-					/>
+					<RiDeleteBin5Fill className='delete_icon' />
 				</div>
 			</div>
 		</article>

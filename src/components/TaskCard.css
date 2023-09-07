@@ -28,6 +28,7 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	background-color: #ebebeb;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -37,10 +38,11 @@
 
 .delete_icon {
 	width: 20px;
-	opacity: 50%;
+	opacity: 80%;
 	transition: all 0.3s ease-in-out;
+	color: red;
 }
 
 .task_delete:hover .delete_icon {
-	opacity: 80%;
+	opacity: 100%;
 }
