@@ -1,6 +1,8 @@
 .task_column_heading {
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	font-size: 30px;
 }
 
 .task_column_icon {

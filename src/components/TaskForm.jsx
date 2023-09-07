@@ -10,6 +10,8 @@ const TaskForm = ({ setTasks }) => {
 		tags: [],
 	});
 
+	const [error, setError] = useState("");
+
 	// *** CHECK TAG
 	const checkTag = (tag) => {
 		return taskData.tags.some((item) => item === tag);
@@ -45,9 +47,12 @@ const TaskForm = ({ setTasks }) => {
 
 		//*** Check if task is empty
 		if (taskData.task.trim() === "") {
-			alert("Task field cannot be empty");
+			setError("Input field cannot be empty.");
 			return;
 		}
+
+		//*** Clear the error message if the input is not empty
+		setError("");
 
 		setTasks((prev) => {
 			return [...prev, taskData];
@@ -72,27 +77,29 @@ const TaskForm = ({ setTasks }) => {
 					onChange={handleChange}
 				/>
 
+				{error && <div className='error_message'>{error}</div>}
+
 				<div className='task_form_bottom_line'>
 					<div>
 						<Tag
-							tagName='HTML'
+							tagName='Chore'
 							selectTag={selectTag}
-							selected={checkTag("HTML")}
+							selected={checkTag("Chore")}
 						/>
 						<Tag
-							tagName='CSS'
+							tagName='Study'
 							selectTag={selectTag}
-							selected={checkTag("CSS")}
+							selected={checkTag("Study")}
 						/>
 						<Tag
-							tagName='JavaScript'
+							tagName='Grocery'
 							selectTag={selectTag}
-							selected={checkTag("JavaScript")}
+							selected={checkTag("Grocery")}
 						/>
 						<Tag
-							tagName='React'
+							tagName='Work'
 							selectTag={selectTag}
-							selected={checkTag("React")}
+							selected={checkTag("Work")}
 						/>
 					</div>
 
