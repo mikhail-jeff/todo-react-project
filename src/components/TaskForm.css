@@ -6,7 +6,12 @@
 }
 
 .app_header > form {
-	width: 40%;
+	width: 50%;
+}
+
+.input_form {
+	display: flex;
+	justify-content: space-between;
 }
 
 .task_input {
@@ -35,7 +40,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 20px;
+	margin-top: 10px;
+}
+
+.status_label {
+	color: #000;
+	font-weight: 500;
 }
 
 .task_status {

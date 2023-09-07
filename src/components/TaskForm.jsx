@@ -68,14 +68,22 @@ const TaskForm = ({ setTasks }) => {
 	return (
 		<header className='app_header'>
 			<form onSubmit={handleSubmit}>
-				<input
-					type='text'
-					name='task'
-					value={taskData.task}
-					className='task_input'
-					placeholder='Enter your task'
-					onChange={handleChange}
-				/>
+				<div className='input_form'>
+					<input
+						type='text'
+						name='task'
+						value={taskData.task}
+						className='task_input'
+						placeholder='Enter your task'
+						onChange={handleChange}
+					/>
+
+					<button
+						type='submit'
+						className='task_submit'>
+						Add
+					</button>
+				</div>
 
 				{error && <div className='error_message'>{error}</div>}
 
@@ -104,6 +112,11 @@ const TaskForm = ({ setTasks }) => {
 					</div>
 
 					<div>
+						<label
+							htmlFor='status'
+							className='status_label'>
+							Status:{" "}
+						</label>
 						<select
 							name='status'
 							className='task_status'
@@ -114,12 +127,6 @@ const TaskForm = ({ setTasks }) => {
 							<option value='done'>Done</option>
 						</select>
 					</div>
-
-					<button
-						type='submit'
-						className='task_submit'>
-						+ Add Task
-					</button>
 				</div>
 			</form>
 		</header>
