@@ -5,9 +5,11 @@ import "./Tag.css";
 const Tag = ({ tagName, selectTag, selected }) => {
 	const tagStyle = {
 		Chore: { backgroundColor: "lime" },
-		Study: { backgroundColor: "magenta" },
+		Study: { backgroundColor: "dodgerblue" },
 		Grocery: { backgroundColor: "cyan" },
 		Work: { backgroundColor: "yellow" },
+		Personal: { backgroundColor: "fuchsia" },
+		Urgent: { backgroundColor: "red" },
 		default: { backgroundColor: "#f9f9f9" },
 	};
 	return (

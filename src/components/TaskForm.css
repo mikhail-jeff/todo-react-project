@@ -6,7 +6,7 @@
 }
 
 .app_header > form {
-	width: 50%;
+	width: 60%;
 }
 
 .input_form {
@@ -43,7 +43,8 @@
 	margin-top: 10px;
 }
 
-.status_label {
+.status_label,
+.tags {
 	color: #000;
 	font-weight: 500;
 }

@@ -89,6 +89,7 @@ const TaskForm = ({ setTasks }) => {
 
 				<div className='task_form_bottom_line'>
 					<div>
+						<label className='tags'>Tags: </label>
 						<Tag
 							tagName='Chore'
 							selectTag={selectTag}
@@ -108,6 +109,16 @@ const TaskForm = ({ setTasks }) => {
 							tagName='Work'
 							selectTag={selectTag}
 							selected={checkTag("Work")}
+						/>
+						<Tag
+							tagName='Personal'
+							selectTag={selectTag}
+							selected={checkTag("Personal")}
+						/>
+						<Tag
+							tagName='Urgent'
+							selectTag={selectTag}
+							selected={checkTag("Urgent")}
 						/>
 					</div>
 
