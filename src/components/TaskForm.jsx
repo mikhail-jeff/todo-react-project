@@ -43,7 +43,11 @@ const TaskForm = ({ setTasks }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		console.log(taskData);
+		//*** Check if task is empty
+		if (taskData.task.trim() === "") {
+			alert("Task field cannot be empty");
+			return;
+		}
 
 		setTasks((prev) => {
 			return [...prev, taskData];

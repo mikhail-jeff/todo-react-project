@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./App.css";
 import TaskColumn from "./components/TaskColumn";
 import TaskForm from "./components/TaskForm";
@@ -5,7 +6,6 @@ import TaskForm from "./components/TaskForm";
 import todoIcon from "./assets/direct-hit.png";
 import doingIcon from "./assets/glowing-star.png";
 import doneIcon from "./assets/check-mark-button.png";
-import { useState, useEffect } from "react";
 
 // *** LOCAL STORAGE
 const oldTasks = localStorage.getItem("tasks");
