@@ -6,7 +6,7 @@
 }
 
 .app_header > form {
-	width: 80%;
+	width: 95%;
 }
 
 /* .input_form_container {
@@ -50,7 +50,7 @@
 
 .status_label,
 .tags {
-	color: #000;
+	color: #eee;
 	font-weight: 500;
 }
 
@@ -62,17 +62,17 @@
 	width: 120px;
 	height: 40px;
 	padding: 0 5px;
+	font-family: inherit;
 }
 
 .task_submit {
 	font-size: 16px;
 	font-weight: 500;
-	background-color: #3221e7;
-	color: #fff;
 	border-radius: 5px;
 	height: 40px;
 	padding: 3px 13px;
 	margin-left: 10px;
 	border: none;
 	cursor: pointer;
+	font-weight: 500;
 }

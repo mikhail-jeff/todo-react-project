@@ -82,7 +82,7 @@ const TaskForm = ({ setTasks }) => {
 						<button
 							type='submit'
 							className='task_submit'>
-							Add
+							ADD
 						</button>
 					</div>
 				</div>
