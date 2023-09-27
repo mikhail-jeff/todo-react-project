@@ -68,21 +68,23 @@ const TaskForm = ({ setTasks }) => {
 	return (
 		<header className='app_header'>
 			<form onSubmit={handleSubmit}>
-				<div className='input_form'>
-					<input
-						type='text'
-						name='task'
-						value={taskData.task}
-						className='task_input'
-						placeholder='Enter your task'
-						onChange={handleChange}
-					/>
+				<div className='input_form_container'>
+					<div className='input_form'>
+						<input
+							type='text'
+							name='task'
+							value={taskData.task}
+							className='task_input'
+							placeholder='Enter your task'
+							onChange={handleChange}
+						/>
 
-					<button
-						type='submit'
-						className='task_submit'>
-						Add
-					</button>
+						<button
+							type='submit'
+							className='task_submit'>
+							Add
+						</button>
+					</div>
 				</div>
 
 				{error && <div className='error_message'>{error}</div>}
@@ -91,34 +93,59 @@ const TaskForm = ({ setTasks }) => {
 					<div>
 						<label className='tags'>Tags: </label>
 						<Tag
-							tagName='Chore'
+							tagName='React'
 							selectTag={selectTag}
-							selected={checkTag("Chore")}
+							selected={checkTag("React")}
 						/>
 						<Tag
-							tagName='Study'
+							tagName='JS'
 							selectTag={selectTag}
-							selected={checkTag("Study")}
+							selected={checkTag("JS")}
 						/>
 						<Tag
-							tagName='Grocery'
+							tagName='C#'
 							selectTag={selectTag}
-							selected={checkTag("Grocery")}
+							selected={checkTag("C#")}
 						/>
 						<Tag
-							tagName='Work'
+							tagName='MERN'
 							selectTag={selectTag}
-							selected={checkTag("Work")}
+							selected={checkTag("MERN")}
 						/>
 						<Tag
-							tagName='Personal'
+							tagName='Fullstack'
 							selectTag={selectTag}
-							selected={checkTag("Personal")}
+							selected={checkTag("Fullstack")}
 						/>
 						<Tag
-							tagName='Urgent'
+							tagName='Database'
 							selectTag={selectTag}
-							selected={checkTag("Urgent")}
+							selected={checkTag("Database")}
+						/>
+						<Tag
+							tagName='Frontend'
+							selectTag={selectTag}
+							selected={checkTag("Frontend")}
+						/>
+						<Tag
+							tagName='Backend'
+							selectTag={selectTag}
+							selected={checkTag("Backend")}
+						/>
+						<Tag
+							tagName='API'
+							selectTag={selectTag}
+							selected={checkTag("API")}
+						/>
+						<Tag
+							tagName='Udemy'
+							selectTag={selectTag}
+							selected={checkTag("Udemy")}
+						/>
+						<Tag
+							tagName='Youtube'
+							selectTag={selectTag}
+							selected={checkTag("Youtube")}
 						/>
 					</div>
 

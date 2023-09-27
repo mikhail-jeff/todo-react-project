@@ -1,15 +1,18 @@
-import React from "react";
-
 import "./Tag.css";
 
 const Tag = ({ tagName, selectTag, selected }) => {
 	const tagStyle = {
-		Chore: { backgroundColor: "lime" },
-		Study: { backgroundColor: "dodgerblue" },
-		Grocery: { backgroundColor: "cyan" },
-		Work: { backgroundColor: "yellow" },
-		Personal: { backgroundColor: "fuchsia" },
-		Urgent: { backgroundColor: "red" },
+		React: { backgroundColor: "lime" },
+		"C#": { backgroundColor: "dodgerblue" },
+		JS: { backgroundColor: "deeppink" },
+		MERN: { backgroundColor: "cyan" },
+		Fullstack: { backgroundColor: "yellow" },
+		Database: { backgroundColor: "fuchsia" },
+		Frontend: { backgroundColor: "blueviolet" },
+		Backend: { backgroundColor: "orange" },
+		API: { backgroundColor: "orangered" },
+		Udemy: { backgroundColor: "mediumorchid" },
+		Youtube: { backgroundColor: "red" },
 		default: { backgroundColor: "#f9f9f9" },
 	};
 	return (
